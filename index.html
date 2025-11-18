@@ -384,6 +384,8 @@
 
 <body>
   <!-- NAVBAR -->
+
+
   <nav class="navbar navbar-expand-lg glass-navbar">
     <a class="navbar-brand" href="#">4-1 Semester</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -411,7 +413,10 @@
             <span class="marquee-text">🎓 All The Best for 4-1 Semester Exam! 📚</span>
           </div>
         </div>
-        <!-- optionally add a short line or instruction -->
+      <div id="cc-sample-exam-link" 
+     style="background-color: yellow; padding: 10px; text-align: center; font-weight: bold; cursor: pointer; margin-bottom: 20px;">
+  Click here For CC Sample Exam
+</div>
 
         <!-- inside #homeSection -->
       <section id="topics" class="page-card" aria-label="Topics section">
@@ -1075,13 +1080,16 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
   <script>
+
     document.addEventListener('DOMContentLoaded', function () {
       // main sections (may be null if not present)
+
       const homeSection = document.getElementById('homeSection');
       const topicsArea = document.getElementById('topicsArea');
       const materialsArea = document.getElementById('materialsArea');
       const syllabusArea = document.getElementById('syllabusArea');
       const questionsArea = document.getElementById('questionsArea'); // <-- new
+
       // nav items
       const navHome = document.getElementById('navHome');
       const navSubjects = document.getElementById('navSubjects');
@@ -1089,6 +1097,13 @@
       const navSyllabus = document.querySelector('[href="#syllabus"]');
       const navQuestions = document.querySelector('[href="#questions"]'); // <-- new
       // Subject toggle buttons (expand/collapse subtopics)
+      const sampleExamLink = document.getElementById('cc-sample-exam-link');
+if (sampleExamLink) {
+    sampleExamLink.addEventListener('click', () => {
+        window.open('https://shyam044.github.io/CC-Sample-Exam/', '_blank');
+    });
+}
+
       const toggles = document.querySelectorAll('[data-toggle-sub]');
       toggles.forEach(button => {
         const subSel = button.getAttribute('data-toggle-sub');
@@ -1503,10 +1518,12 @@
     // Update once on load, then every 10 seconds (no countdown)
     updateSpecialExam();
     setInterval(updateSpecialExam, 10000); // Check every 10 sec
+
   </script>
 </body>
 
 </html>
+
 
 
 

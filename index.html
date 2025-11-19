@@ -413,24 +413,23 @@
             <span class="marquee-text">🎓 All The Best for 4-1 Semester Exam! 📚</span>
           </div>
         </div>
-      <div id="cc-sample-exam-link" 
+    <!--  <div id="cc-sample-exam-link" 
      style="background-color: yellow; padding: 10px; text-align: center; font-weight: bold; cursor: pointer; margin-bottom: 20px;">
   Click here For CC Sample Exam
-</div>
+</div>-->
 
         <!-- inside #homeSection -->
-      <section id="topics" class="page-card" aria-label="Topics section">
+      <section class="page-card" aria-label="Topics list">
         <div class="d-flex flex-column">
           <div class="topic-row w-100 mb-3">
-            <div class="topic-label">Subject-2 :</div>
-            <button class="topic-btn" aria-expanded="false" data-toggle-sub="#cc-subtopics-2">Cloud Computing</button>
+            <div class="topic-label">Subject-3 :</div>
+            <button class="topic-btn" data-toggle-sub="#wns-subtopics-2" aria-expanded="false">Wireless Network Security</button>
           </div>
-          <div id="cc-subtopics-2" class="subtopics hidden" role="region" aria-hidden="true">
-            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/CC-UNIT-01/">Unit - 01</a>
-            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/CC-Unit-02/">Unit - 02</a>
-            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/CC-Unit-03/">Unit - 03</a>
-            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/CC-Unit-04/">Unit - 04</a>
-            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/CC-Unit-05/">Unit - 05</a>
+          <div id="wns-subtopics-2" class="subtopics hidden" role="region" aria-hidden="true">
+            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/WNS-Unit-01/">Unit - 01</a>
+            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/WNS-Unit-02/">Unit - 02</a>
+            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/WNS-Unit-03/">Unit - 03</a>
+            <a class="btn btn-outline-secondary sub-button" href="https://shyam044.github.io/WNS-Unit-04/">Unit - 04</a>
           </div>
         </div>
       </section>
@@ -1492,37 +1491,10 @@ if (sampleExamLink) {
       }
     });
   </script>
-  <script>
-    // Special Exam - UHV-2 - Static Text Only
-    const SPECIAL_EXAM_LINK = 'https://shyam044.github.io/UHV-2-Special-Exam/';
-    const EXAM_TIME_IST = new Date('2025-11-16T20:00:00+05:30'); // 8:00 PM IST, Nov 16, 2025
-
-    function updateSpecialExam() {
-      const now = new Date();
-      const textEl = document.getElementById('specialExamText');
-      if (!textEl) return;
-
-      if (now >= EXAM_TIME_IST) {
-        textEl.innerHTML = `
-        <a href="${SPECIAL_EXAM_LINK}" target="_blank" 
-           style="color:white; text-decoration:none; font-weight:900;">
-          Exam Closed
-        </a>`;
-        textEl.className = 'badge badge-pill badge-success p-3 font-weight-bold';
-      } else {
-        textEl.textContent = 'UHV-2 Special Exam starts at 8:00 PM';
-        textEl.className = 'badge badge-pill badge-warning p-3 font-weight-bold';
-      }
-    }
-
-    // Update once on load, then every 10 seconds (no countdown)
-    updateSpecialExam();
-    setInterval(updateSpecialExam, 10000); // Check every 10 sec
-
-  </script>
 </body>
 
 </html>
+
 
 
 
